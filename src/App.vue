@@ -111,29 +111,17 @@
           <div class="my-auto">
             <h2 class="mb-5">Education</h2>
 
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="(school, index) in education" :key="index">
               <div class="resume-content mr-auto">
-                <h3 class="mb-0">University of Colorado Boulder</h3>
-                <div class="subheading mb-3">Bachelor of Science</div>
-                <div>Computer Science - Web Development Track</div>
-                <p>GPA: 3.23</p>
+                <h3 class="mb-0">{{school.name}}</h3>
+                <div class="subheading mb-3" v-if="school.degree">{{school.degree}}</div>
+                <div v-if="school.field">{{school.field}}</div>
+                <p>GPA: {{school.gpa}}</p>
               </div>
               <div class="resume-date text-md-right">
-                <span class="text-primary">August 2006 - May 2010</span>
+                <span class="text-primary">{{school.startDate}} - {{school.endDate}}</span>
               </div>
             </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row">
-              <div class="resume-content mr-auto">
-                <h3 class="mb-0">James Buchanan High School</h3>
-                <div class="subheading mb-3">Technology Magnet Program</div>
-                <p>GPA: 3.56</p>
-              </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">August 2002 - May 2006</span>
-              </div>
-            </div>
-
           </div>
         </section>
 
@@ -267,6 +255,22 @@ export default {
           ],
           startDate: 'May 2018',
           endDate: 'August 2018'
+        }
+      ],
+      education: [
+        {
+          name: 'University of Maryland, College Park',
+          degree: 'Bachelor of Science',
+          field: 'Computer Science - Data Science Track',
+          gpa: '3.13',
+          startDate: 'August 2016',
+          endDate: 'May 2020'
+        },
+        {
+          name: 'Gonzaga College High School',
+          gpa: '4.23',
+          startDate: 'August 2012',
+          endDate: 'May 2016'
         }
       ]
     }
