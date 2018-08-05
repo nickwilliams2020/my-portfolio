@@ -49,7 +49,7 @@
             <p class="mb-5">{{aboutMe}}</p>
             <ul class="list-inline list-social-icons mb-0">
               <li class="list-inline-item">
-                <a href="//facebook.com/WckNillims">
+                <a href="//facebook.com/WckNillims" target="_blank">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -57,7 +57,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="//twitter.com/Nickolodean_">
+                <a href="//twitter.com/Nickolodean_" target="_blank">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -65,7 +65,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="//linkedin.com/in/nicholas-williams-1b0812131/">
+                <a href="//linkedin.com/in/nicholas-williams-1b0812131/" target="_blank">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -73,7 +73,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="//github.com/nickwilliams2020">
+                <a href="//github.com/nickwilliams2020" target="_blank">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -131,52 +131,13 @@
 
             <div class="subheading mb-3">Programming Languages &amp; Tools</div>
             <ul class="list-inline list-icons">
-              <li class="list-inline-item">
-                <i class="devicons devicons-html5"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-css3"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-javascript"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-jquery"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-sass"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-less"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-bootstrap"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-wordpress"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-grunt"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-gulp"></i>
-              </li>
-              <li class="list-inline-item">
-                <i class="devicons devicons-npm"></i>
+              <li class="list-inline-item" v-for="(language, index) in languages" :key="index">
+                <i :class="language.icon"></i>
               </li>
             </ul>
 
             <div class="subheading mb-3">Workflow</div>
             <ul class="fa-ul mb-0">
-              <li>
-                <i class="fa-li fa fa-check"></i>
-                Mobile-First, Responsive Design</li>
-              <li>
-                <i class="fa-li fa fa-check"></i>
-                Cross Browser Testing &amp; Debugging</li>
-              <li>
-                <i class="fa-li fa fa-check"></i>
-                Cross Functional Teams</li>
               <li>
                 <i class="fa-li fa fa-check"></i>
                 Agile Development &amp; Scrum</li>
@@ -271,6 +232,26 @@ export default {
           gpa: '4.23',
           startDate: 'August 2012',
           endDate: 'May 2016'
+        }
+      ],
+      languages: [
+        {
+          icon: 'devicons devicons-python'
+        },
+        {
+          icon: 'devicons devicons-java'
+        },
+        {
+          icon: 'devicon-cplusplus-plain'
+        },
+        {
+          icon: 'devicon-c-plain'
+        },
+        {
+          icon: 'devicon-amazonwebservices-plain-wordmark'
+        },
+        {
+          icon: 'devicon-docker-plain'
         }
       ]
     }
