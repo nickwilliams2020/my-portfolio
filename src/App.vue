@@ -4,7 +4,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <span class="d-block d-lg-none">Homepage</span>
+          <span class="d-block d-lg-none">Home</span>
           <span class="d-none d-lg-block">
             <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./assets/nicks-face.jpeg" alt="">
           </span>
@@ -132,7 +132,19 @@
             <div class="subheading mb-3">Programming Languages &amp; Tools</div>
             <ul class="list-inline list-icons">
               <li class="list-inline-item" v-for="(language, index) in languages" :key="index">
-                <i :class="language.icon"></i>
+                <i :class="language.icon" :title="language.description"></i>
+              </li>
+            </ul>
+            <ul class="list-inline list-icons">
+              <li class="list-inline-item" v-for="(tool, index) in tools" :key="index">
+                <i :class="tool.icon" :title="tool.description"></i>
+              </li>
+            </ul>
+
+            <div class="subheading mb-3">Environments</div>
+            <ul class="list-inline list-icons">
+              <li class="list-inline-item" v-for="(system, index) in systems" :key="index">
+                <i :class="system.icon" :title="system.description"></i>
               </li>
             </ul>
 
@@ -236,22 +248,73 @@ export default {
       ],
       languages: [
         {
-          icon: 'devicons devicons-python'
+          icon: 'devicons devicons-python',
+          description: 'Python',
+          link: ''
         },
         {
-          icon: 'devicons devicons-java'
+          icon: 'devicon-c-plain',
+          description: 'C',
+          link: ''
         },
         {
-          icon: 'devicon-cplusplus-plain'
+          icon: 'devicon-javascript-plain',
+          description: 'Docker',
+          link: ''
         },
         {
-          icon: 'devicon-c-plain'
+          icon: 'devicons devicons-java',
+          description: 'Java',
+          link: ''
+        }
+      ],
+      tools: [
+        {
+          icon: 'devicon-amazonwebservices-plain-wordmark',
+          description: 'Amazon Web Services',
+          link: ''
         },
         {
-          icon: 'devicon-amazonwebservices-plain-wordmark'
+          icon: 'devicon-docker-plain',
+          description: 'Docker',
+          link: ''
         },
         {
-          icon: 'devicon-docker-plain'
+          icon: 'devicon-git-plain',
+          description: 'Git',
+          link: ''
+        },
+        {
+          icon: 'devicon-mongodb-plain',
+          description: 'MongoDB',
+          link: ''
+        },
+        {
+          icon: 'devicon-vuejs-plain',
+          description: 'Vue JS',
+          link: ''
+        },
+        {
+          icon: 'devicon-devicon-plain',
+          description: 'Devicons',
+          link: ''
+        }
+      ],
+      systems: [
+        {
+          icon: 'devicon-ubuntu-plain',
+          description: 'Ubuntu',
+          link: ''
+        },
+        {
+          icon: 'devicon-windows8-plain',
+          description: 'Windows',
+          link: ''
+        },
+        {
+          icon: 'devicon-apple-plain',
+          description: 'Mac OS',
+          link: ''
         }
       ]
     }
