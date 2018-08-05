@@ -4,9 +4,9 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <span class="d-block d-lg-none">Start Bootstrap</span>
+          <span class="d-block d-lg-none">Homepage</span>
           <span class="d-none d-lg-block">
-            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/logo.png" alt="">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./assets/nicks-face.jpeg" alt="">
           </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,7 @@
               <span class="text-primary">{{surname}}</span>
             </h1>
             <div class="subheading mb-5"> {{address}}
-              <a href="mailto:name@email.com">{{email}}</a>
+              <a :href='mailto'>{{email}}</a>
             </div>
             <p class="mb-5">{{aboutMe}}</p>
             <ul class="list-inline list-social-icons mb-0">
@@ -253,6 +253,7 @@ export default {
       surname: 'WILLIAMS',
       address: '9503 East Light Drive · Silver Spring, MD 20903 · (240) 678-5207 ·',
       email: 'Nick.A.Williams@outlook.com',
+      mailto: 'mailto:Nick.A.Williams@outlook.com',
       aboutMe: "I'm a Software Engineering student with an insatiable appetite for learning, an aptitude for leadership, and experience in agile web development.",
       experience: [
         {
@@ -434,18 +435,18 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: rgb(65, 127, 207) !important;
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: rgb(65, 127, 207) !important;
 }
 
 a {
-  color: #BD5D38;
+  color: rgb(65, 127, 207);
 }
 
 a:hover, a:focus, a:active {
-  color: #824027;
+  color: rgb(65, 127, 207);
 }
 </style>
