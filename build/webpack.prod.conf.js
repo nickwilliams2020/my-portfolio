@@ -119,7 +119,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     ]),
     new PrerenderSpaPlugin(
       // Path to compiled app
-      path.join(__dirname, '../dist'),
+      path.join(__dirname, '../docs'),
       // List of endpoints you wish to prerender
       [ '/' ]
     )
