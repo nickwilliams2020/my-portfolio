@@ -256,7 +256,7 @@ export default {
       ],
       languages: [
         {
-          icon: 'devicons devicons-python',
+          icon: 'devicon-python-plain',
           description: 'Python',
           link: ''
         },
@@ -271,7 +271,7 @@ export default {
           link: ''
         },
         {
-          icon: 'devicons devicons-java',
+          icon: 'devicon-java-plain',
           description: 'Java',
           link: ''
         }
