@@ -267,7 +267,7 @@ export default {
         },
         {
           icon: 'devicon-javascript-plain',
-          description: 'Docker',
+          description: 'Javascript',
           link: ''
         },
         {
