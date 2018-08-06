@@ -94,7 +94,7 @@
                 <div class="subheading mb-3">{{job.company}} | {{job.division}}</div>
                 <p>
                   <ul v-for="(bullet, index) in job.description" :key="index">
-                    <li>{{job.description[index]}}</li>
+                    <li>{{bullet}}</li>
                   </ul>
                 </p>
               </div>
@@ -160,42 +160,26 @@
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
           <div class="my-auto">
             <h2 class="mb-5">Interests</h2>
-            <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-            <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+            <p>Apart from my development projects, I love making music! During the school year I travel and perform around the country as a part of the University of Maryland's premiere A Capella Group, <a href="//umdfauxpaz.com" target="_blank">Faux Paz</a>.
+              You can find my personal music channel <a href="//soundcloud.com/nickmp3" target="_blank">here</a>.
+            </p>
+            <p>
+              Here at the University of Maryland I am also Maryland Images Tour Guide. If you ever visit, request me!
+            </p>
+            <p class="mb-0">
+
+            </p>
           </div>
         </section>
 
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
           <div class="my-auto">
             <h2 class="mb-5">Awards &amp; Certifications</h2>
-            <ul class="fa-ul mb-0">
+            <ul class="fa-ul mb-0" v-for="(award, index) in awards" :key="index">
               <li>
                 <i class="fa-li fa fa-trophy text-warning"></i>
-                Google Analytics Certified Developer</li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                Mobile Web Specialist - Google Certification</li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                1<sup>st</sup>
-                Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                1<sup>st</sup>
-                Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                2<sup>nd</sup>
-                Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-              <li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                1<sup>st</sup>
-                Place - James Buchanan High School - Hackathon 2006</li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                3<sup>rd</sup>
-                Place - James Buchanan High School - Hackathon 2005</li>
+                {{award.name}}
+              </li>
             </ul>
           </div>
         </section>
@@ -215,7 +199,7 @@ export default {
       address: '9503 East Light Drive · Silver Spring, MD 20903 · (240) 678-5207 ·',
       email: 'Nick.A.Williams@outlook.com',
       mailto: 'mailto:Nick.A.Williams@outlook.com',
-      aboutMe: "I'm a Software Engineering student with an insatiable appetite for learning, an aptitude for leadership, and experience in agile web development.",
+      aboutMe: "I'm a Software Engineering student with an appetite for learning, an aptitude for leadership, and experience in front & back end web development.",
       experience: [
         {
           position: 'Software Engineering Intern',
@@ -228,6 +212,30 @@ export default {
           ],
           startDate: 'May 2018',
           endDate: 'August 2018'
+        },
+        {
+          position: 'Lead Software Engineering Intern',
+          company: 'Bio-Imaging & Machine Vision Laboratory',
+          division: 'Fischell Department of Bioengineering',
+          description: [
+            'Designed an application in C++ and Matrox Imaging Library which performed camera calibration for an automated food processing machine',
+            'Designed, 3D printed, and tested modular base to allow a mechanical system to bend around a conveyor belt using Autodesk Inventor'
+          ],
+          startDate: 'June 2017',
+          endDate: 'Present'
+        },
+        {
+          position: 'Lab Assistant',
+          company: 'Bing Nano Research Laboratory',
+          division: 'UMD Energy Research Center',
+          description: [
+            'Designed roller system for high temperature material treatment which supported research in nanomaterial manufacturing and flexible electronics',
+            'Led and delivered presentation of roller system design to panel of university professors and graduate students',
+            'Designed and fabricated a 3D Printed containment system for high energy ceramic battery packs'
+
+          ],
+          startDate: 'November 2016',
+          endDate: 'Present'
         }
       ],
       education: [
@@ -315,6 +323,12 @@ export default {
           icon: 'devicon-apple-plain',
           description: 'Mac OS',
           link: ''
+        }
+      ],
+      awards: [
+        {
+          name: 'Northrop Grumman - IoT Hackathon Finalist',
+          description: 'Worked with a team of four to develop an easily deployable, low cost network of sensor bundles to repurpose any home with a Wi-Fi network into a smart home and an aid to emergency response personnel'
         }
       ]
     }
