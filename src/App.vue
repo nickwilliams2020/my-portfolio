@@ -200,7 +200,7 @@
                   </div>
                 </div>
                 <div class="css-w5pcnp e12baen61" style open="true">
-                  <iframe width="100%" height="100%" src="https://nicholaswilliams.typeform.com/to/HTlVOb?typeform-embed=embed-widget&amp;embed-hide-footer=true&amp;embed-opacity=50" data-qa="iframe" style="border: 0px;" frameborder="0">
+                  <iframe width="100%" height="400px" src="https://nicholaswilliams.typeform.com/to/HTlVOb?typeform-embed=embed-widget&amp;embed-hide-footer=true&amp;embed-opacity=50" data-qa="iframe" style="border: 0px;" frameborder="0">
                   </iframe>
                 </div>
               </div>
