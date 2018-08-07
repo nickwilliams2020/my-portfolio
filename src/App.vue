@@ -32,6 +32,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -40,6 +43,9 @@
 
         <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
           <div class="my-auto">
+            <h3 class="subheading">
+              HI IM
+            </h3>
             <h1 class="mb-0">{{name}}
               <span class="text-primary">{{surname}}</span>
             </h1>
@@ -116,7 +122,7 @@
                 <h3 class="mb-0">{{school.name}}</h3>
                 <div class="subheading mb-3" v-if="school.degree">{{school.degree}}</div>
                 <div v-if="school.field">{{school.field}}</div>
-                <p>GPA: {{school.gpa}}</p>
+                <p v-if="school.gpa">GPA: {{school.gpa}}</p>
               </div>
               <div class="resume-date text-md-right">
                 <span class="text-primary">{{school.startDate}} - {{school.endDate}}</span>
@@ -137,7 +143,7 @@
             </ul>
             <ul class="list-inline list-icons">
               <li class="list-inline-item" v-for="(tool, index) in tools" :key="index">
-                <i :class="tool.icon" :title="tool.description"></i>
+                <i :class="tool.icon" :title="tool.description" :href="tool.link" target="_blank"></i>
               </li>
             </ul>
 
@@ -184,6 +190,26 @@
           </div>
         </section>
 
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
+          <div class="my-auto">
+            <h2 class="mb-5">Contact me</h2>
+            <div data-url="https://nicholaswilliams.typeform.com/to/HTlVOb" data-transparency="50" data-hide-headers="false" data-hide-footer="true" class="typeform-widget" style="width: 100%; height: 500px; margin-top: 50px;">
+              <div class="css-1o3fej e12baen60" style="">
+                <div class="css-h3d25g e12baen62">
+                  <div>
+                  </div>
+                </div>
+                <div class="css-w5pcnp e12baen61" style open="true">
+                  <iframe width="100%" height="100%" src="https://nicholaswilliams.typeform.com/to/HTlVOb?typeform-embed=embed-widget&amp;embed-hide-footer=true&amp;embed-opacity=50" data-qa="iframe" style="border: 0px;" frameborder="0">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <div style="font-family: sans-serif; font-size: 12px; color: rgb(153, 153, 153); opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=Inl70L&amp;utm_source=typeform.com-11842598-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded-poweredbytypeform&amp;utm_term=EN" target="_blank" style="color: rgb(153, 153, 153);">Typeform</a>
+            </div>
+          </div>
+        </section>
+
       </div>
     </body>
   </div>
@@ -196,10 +222,10 @@ export default {
       title: 'My portfolio',
       name: 'NICHOLAS',
       surname: 'WILLIAMS',
-      address: '9503 East Light Drive · Silver Spring, MD 20903 · (240) 678-5207 ·',
-      email: 'Nick.A.Williams@outlook.com',
-      mailto: 'mailto:Nick.A.Williams@outlook.com',
-      aboutMe: "I'm a Software Engineering student with an appetite for learning, an aptitude for leadership, and experience in front & back end web development.",
+      address: '',
+      email: '',
+      mailto: '',
+      aboutMe: 'Student. Developer. Leader.',
       experience: [
         {
           position: 'Software Engineering Intern',
@@ -243,13 +269,13 @@ export default {
           name: 'University of Maryland, College Park',
           degree: 'Bachelor of Science',
           field: 'Computer Science - Data Science Track',
-          gpa: '3.13',
+          gpa: '',
           startDate: 'August 2016',
           endDate: 'May 2020'
         },
         {
           name: 'Gonzaga College High School',
-          gpa: '4.23',
+          gpa: '',
           startDate: 'August 2012',
           endDate: 'May 2016'
         }
@@ -280,32 +306,32 @@ export default {
         {
           icon: 'devicon-amazonwebservices-plain-wordmark',
           description: 'Amazon Web Services',
-          link: ''
+          link: '//aws.amazon.com'
         },
         {
           icon: 'devicon-docker-plain',
           description: 'Docker',
-          link: ''
+          link: '//docker.com'
         },
         {
           icon: 'devicon-git-plain',
           description: 'Git',
-          link: ''
+          link: '//github.com/nickwilliams2020'
         },
         {
           icon: 'devicon-mongodb-plain',
           description: 'MongoDB',
-          link: ''
+          link: '//mongodb.com'
         },
         {
           icon: 'devicon-vuejs-plain',
           description: 'Vue JS',
-          link: ''
+          link: '//vusjs.org'
         },
         {
           icon: 'devicon-devicon-plain',
           description: 'Devicons',
-          link: ''
+          link: '//konpa.github.io/devicon/'
         }
       ],
       systems: [
